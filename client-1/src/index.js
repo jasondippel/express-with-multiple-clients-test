@@ -1,7 +1,10 @@
-import './main.scss'
+import './root.scss'
 
-const heading = document.createElement('h1')
-heading.textContent = 'Client 1'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-const app = document.querySelector('#root')
-app.append(heading)
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);

@@ -27,7 +27,7 @@ module.exports = {
           from: paths.public,
           to: 'assets',
           globOptions: {
-            ignore: ['*.DS_Store', 'index.html'],
+            ignore: ['*.DS_Store'],
           },
         },
       ],
