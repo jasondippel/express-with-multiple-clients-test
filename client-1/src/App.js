@@ -1,8 +1,15 @@
 import React from 'react'
+import LoginButton from './components/LoginButton'
+import LogoutButton from './components/LogoutButton'
+import Profile from './components/Profile'
 
 const App = () => {
-  console.log('env', process.env.SAMPLE_VALUE)
-  return <h1>Client 1</h1>
+  return <>
+    <h1>Client 1</h1>
+    <Profile />
+    <LoginButton />
+    <LogoutButton />
+  </>
 }
 
 export default App
