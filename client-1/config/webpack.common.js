@@ -1,8 +1,12 @@
 const paths = require('./paths')
 
+const dotenv = require('dotenv')
+const path = require('path')
+const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   // Where webpack looks to start building the bundle
@@ -17,6 +21,14 @@ module.exports = {
 
   // Customize the webpack build process
   plugins: [
+    // // Setup environment variables
+    // new Dotenv({ path: '../env/.env' }),
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(dotenv.config({
+        path: path.resolve(__dirname, '../env/.env'),
+      }).parsed) // it will automatically pick up key values from .env file
+    }),
+
     // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
 
