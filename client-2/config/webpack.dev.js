@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const { merge } = require('webpack-merge')
 const common = require('./webpack.common.js')
 
-const PORT = 8080;
+const PORT = 8081;
 
 module.exports = merge(common, {
   // Set the mode to development or production

@@ -46,7 +46,7 @@ module.exports = {
     // Generates an HTML file from a template
     // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
     new HtmlWebpackPlugin({
-      title: 'Client 1',
+      title: 'Client 2',
       template: paths.public + '/index.html', // template file
       filename: 'index.html', // output file
     }),
